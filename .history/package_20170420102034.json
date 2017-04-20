@@ -29,8 +29,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.24.1",
-    "browser-sync": "^2.18.8",
-    "browser-sync-webpack-plugin": "^1.1.4",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",

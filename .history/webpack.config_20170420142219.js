@@ -34,10 +34,9 @@ let globalVar = new webpack.DefinePlugin({
     __PROD__: process.env.NODE_ENV.trim() === 'production'
     });
 let myproxy=new BrowserSyncPlugin({
-    host: 'http://172.16.2.67',
+    host: '172.16.2.67',
     port: 9002,
-    // server: { baseDir: ['build'] },
-    proxy: 'http://127.0.0.1:9000/build/index.html', // 这里的proxy和webpack-dev-server中的proxy作用不一样，这里的proxy表示本地已经有一个server了，所以要代理一下（看有道笔记中关于browser-sync的文章），webpack-dev-server中的proxy是用来解决跨域问题的。
+    proxy: 'http://127.0.0.1:9002/', // 这里的proxy和webpack-dev-server中的proxy作用不一样，这里的proxy表示本地已经有一个server了，所以要代理一下（看有道笔记中关于browser-sync的文章），webpack-dev-server中的proxy是用来解决跨域问题的。
     logConnections: false,
     notify: false
   }, {
@@ -72,7 +71,7 @@ const config = {
   //输出的文件名 合并以后的js会命名为bundle.js
   output: {
     path: BUILD_PATH,
-    publicPath: '/build/',
+    publicPath: 'http://172.16.2.67:9000/build/',
     filename: 'bundle111.js'
   },
   module: {

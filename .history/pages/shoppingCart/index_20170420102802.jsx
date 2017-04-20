@@ -7,7 +7,7 @@ class ShoppingCart extends Component{
   }
   render(){
     return(
-      <div className={`${prefixName}-sss`}><input type="text"/></div>
+      <div className={`${prefixName}-sss`}>this is the page test1212121212</div>
     );
   }
 }

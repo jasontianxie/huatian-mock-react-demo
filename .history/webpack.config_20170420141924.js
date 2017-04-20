@@ -3,7 +3,7 @@ var HtmlwebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
 //定义了一些文件夹的路径
 var ROOT_PATH = path.resolve(__dirname);
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
@@ -33,23 +33,22 @@ let globalVar = new webpack.DefinePlugin({
     __DEV__: process.env.NODE_ENV.trim() === 'development',
     __PROD__: process.env.NODE_ENV.trim() === 'production'
     });
-let myproxy=new BrowserSyncPlugin({
-    host: 'http://172.16.2.67',
-    port: 9002,
-    // server: { baseDir: ['build'] },
-    proxy: 'http://127.0.0.1:9000/build/index.html', // 这里的proxy和webpack-dev-server中的proxy作用不一样，这里的proxy表示本地已经有一个server了，所以要代理一下（看有道笔记中关于browser-sync的文章），webpack-dev-server中的proxy是用来解决跨域问题的。
-    logConnections: false,
-    notify: false
-  }, {
-    reload: false
-  });
+// let myproxy=new BrowserSyncPlugin({
+//     host: '172.16.2.67',
+//     port: 9000,
+//     proxy: 'http://127.0.0.1:9000/', // 这里的proxy和webpack-dev-server中的proxy作用不一样，这里的proxy表示本地已经有一个server了，所以要代理一下（看有道笔记中关于browser-sync的文章），webpack-dev-server中的proxy是用来解决跨域问题的。
+//     logConnections: false,
+//     notify: false
+//   }, {
+//     reload: false
+//   });
 // let autoprefixer = require('autoprefixer');
 
 if(process.env.NODE_ENV === 'development'){//开发环境
   plugins.push(HtmlwebpackPluginVar);
   // plugins.push(extractCSS);开发环境下不分离css
   plugins.push(globalVar);
-  plugins.push(myproxy); 
+  // plugins.push(myproxy); 
   plugins.push(new webpack.HotModuleReplacementPlugin());
 }else{//生产环境
   plugins.push(globalVar);
@@ -72,7 +71,7 @@ const config = {
   //输出的文件名 合并以后的js会命名为bundle.js
   output: {
     path: BUILD_PATH,
-    publicPath: '/build/',
+    publicPath: 'http://172.16.2.67:9000/build/',
     filename: 'bundle111.js'
   },
   module: {

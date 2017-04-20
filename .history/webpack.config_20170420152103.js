@@ -72,7 +72,7 @@ const config = {
   //输出的文件名 合并以后的js会命名为bundle.js
   output: {
     path: BUILD_PATH,
-    publicPath: '/build/',
+    publicPath: 'http://127.0.0.1:9000/build/',
     filename: 'bundle111.js'
   },
   module: {

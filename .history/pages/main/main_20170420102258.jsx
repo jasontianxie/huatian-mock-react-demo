@@ -7,7 +7,7 @@ class Main extends Component{
     return(
       <div>
       <ShoppingCart/>
-      <div className={`${prefixName}-aaa`}>this is the page 234423525</div>
+      <div className={`${prefixName}-aaa`}>this is the page wenqian</div>
       </div>
     );
   }
