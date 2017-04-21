@@ -15,7 +15,7 @@ class Main extends Component{
       <div>
       <div className={`${prefixName}-aaa`}>
         <input type="text"/>
-        <div className={`${prefixName}-bbb`}>this is the page</div>
+        <div className={`${prefixName}-bbb`}></div>
       </div>
       </div>
     );

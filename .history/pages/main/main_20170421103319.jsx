@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-// import {ShoppingCart} from '../shoppingCart/index.jsx';
+import {ShoppingCart} from '../shoppingCart/index.jsx';
 
 const prefixName = 'main';
 
@@ -13,10 +13,8 @@ class Main extends Component{
   render(){
     return(
       <div>
-      <div className={`${prefixName}-aaa`}>
-        <input type="text"/>
-        <div className={`${prefixName}-bbb`}>this is the page</div>
-      </div>
+      <ShoppingCart/>
+      <div className={`${prefixName}-aaa`}>this is the page test</div>
       </div>
     );
   }

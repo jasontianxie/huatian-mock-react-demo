@@ -12,12 +12,9 @@
 
   <div id="app"></div>
 <script type="text/javascript">
-  window.onresize = function(){
+  document.addEventListener(document,"DOMContentLoaded",function(){
     document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-  },false);
+  });
 </script>
 <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
 <script type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>

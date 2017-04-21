@@ -13,10 +13,7 @@ class Main extends Component{
   render(){
     return(
       <div>
-      <div className={`${prefixName}-aaa`}>
-        <input type="text"/>
-        <div className={`${prefixName}-bbb`}>this is the page</div>
-      </div>
+      <div className={`${prefixName}-aaa`}>this is the page test</div>
       </div>
     );
   }
