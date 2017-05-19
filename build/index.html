@@ -2,17 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>huatian-mock-react-demo</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1,width=device-width,user-scalable=no">
-  <% for (var css in htmlWebpackPlugin.files.css) { %>
-  <link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-  <% } %>
+  
+  <link href="/build/css/main.css" rel="stylesheet">
+  
 </head>
 <body>
 
   <div id="app"></div>
 <script type="text/javascript">
-  const publicPath="http://127.0.0.1:8081/assets";//定义一个全局变量
   window.onresize = function(){
     document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
   }
@@ -20,8 +19,8 @@
     document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
   },false);
 </script>
-<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-<script type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-<% } %>
+
+<script type="text/javascript" src="/build/bundle111.js"></script>
+
 </body>
 </html>

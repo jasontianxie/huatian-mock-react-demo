@@ -92,6 +92,10 @@ const config = {
        	// loaders: ['style-loader', 'css-loader', 'sass-loader']
          //开发模式要内联，这样才能支持热替换，生产模式下把css分离
         loader:(process.env.NODE_ENV === 'production')?extractCSS.extract(['css-loader?sourcemap','postcss-loader','sass-loader']):'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=40000'
       }
     ]
   },

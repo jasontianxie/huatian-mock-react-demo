@@ -1,0 +1,27 @@
+.component-list{
+    display: flex;
+    padding: 10px 0;
+    border-bottom: solid 1px #efefef;
+}
+.component-list-left{
+    display: flex;
+    flex: 1;
+}
+.component-list-icon{
+    display: flex;
+    width: 30px;
+    height: 15px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.component-list-text{
+    font-size: 12px;
+}
+.component-list-arrow{
+    width: 30px;
+    height: 15px;
+    font-size: 13px;
+    text-align: right;
+}

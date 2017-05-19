@@ -1,11 +1,86 @@
 body{
-  background: gray;
+  margin: 0;
 }
-.main-aaa{
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #efefef;
+}
+.main-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: rem(350);
+  background: url('#{$picPath}/img/usercenter1.png') no-repeat 50% 50%/100% 100%;
+}
+.main-headWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top:rem(40);
+  width: rem(140);
+  height: rem(140);
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.main-head{
+  width: rem(120);
+  height: rem(120);
+  overflow: hidden;
+  border-radius: 50%;
+  background: url('#{$picPath}/img/shouye-3.png') no-repeat 50% 50%/100% 100%;
+}
+.main-username{
+  margin-top:rem(10);
+  font-size: 16px;
+  color: white;
+}
+.main-bandWrap{
+  display: flex;
+  margin-top:rem(10);
+  padding: 2px;
+  border: 1px white solid;
+  border-radius: 18px/18px;
+}
+.main-band{
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  background: url('#{$picPath}/img/cup_cake.png') no-repeat 50% 50%/100% 100%;
+}
+.main-bandTxt{
+  font-size: 14px;
+}
+.main-tabs{
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  font-size: 16px;
+  text-align: center;
+  background: white;
+}
+.main-tab{
+  flex: 1;
+}
+.main-tab:nth-child(2){
+  border-left:solid 1px #666;
+  border-right:solid 1px #666; 
+}
+.main-tabTop{
+  color: green;
+}
+.main-tabBottom{
   color: black;
+  font-size: 14px;
 }
-.main-bbb{
-  width: rem(300);
-  height: 50px;
-  border: solid 1px red;
+.main-listWrap{
+  margin-top: 10px;
+  padding: 0 10px;
+  flex: 1;
+  overflow: auto;
+  background: white;
 }
