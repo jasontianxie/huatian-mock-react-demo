@@ -3,7 +3,7 @@ const prefixName = 'component-list';
 
 export const List = (props) => {
     return(
-        <div className={`${prefixName}`}>
+        <div className={`${prefixName}`} onClick={props.onClick}>
             <div className={`${prefixName}-left`}>
                 <div className={`${prefixName}-icon`}>
                     <img src={`${publicPath}/img/${props.picName}.svg`} alt="no pic"/>
